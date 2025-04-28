@@ -1,57 +1,66 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Contact Me</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Home Essentials</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
-
 <body>
 
-<header>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Home Essentials</a>
+      <div class="menu-toggle">&#9776;</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<h1>Contact Me</h1>
+  <!-- Hero Section -->
+  <section class="hero products-hero">
+    <div class="hero-text">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you. Get in touch today!</p>
+    </div>
+  </section>
 
-<nav>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      <p><strong>Address:</strong> Plot 123, Commerce Park, Gaborone, Botswana</p>
+      <p><strong>Phone:</strong> +267 71234567</p>
+      <p><strong>Email:</strong> support@homeessentials.co.bw</p>
+    </div>
 
- <a href="index.html" class="logo">Home Essentials</a>
-            <div class="menu-toggle">&#9776;</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html" class="active">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-</nav>
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required/>
+        <input type="email" name="email" placeholder="Your Email" required/>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
 
-</header>
+  
 
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Home Essentials. All rights reserved.</p>
+    <div class="socials">
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+    </div>
+  </footer>
 
-<main>
-
-
- <p> Contact us at your earliest convenience and let's help you build your dream home!
-    </p>☎️: 391-223
-    </p>📞: (267) 73334925
-   </p> 📠: 391-232
-   </p> 📧: dreamhomeessentials@sales.com
-   </p> 📍: Gaborone CBD
-</main>
-
-
-<footer>
-
-<p>&copy; 2025 Home Essentials</p>
-
-</footer>
-
+  <script src="script.js"></script>
 </body>
-
 </html>
