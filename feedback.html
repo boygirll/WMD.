@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback - Home Essentials</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Home Essentials</a>
+      <div class="menu-toggle">&#9776;</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html" class="active">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero products-hero">
+    <div class="hero-text">
+      <h1>Feedback</h1>
+      <p>Your opinion matters to us. Help us improve!</p>
+    </div>
+  </section>
+
+  <!-- Feedback Form Section -->
+  <section class="contact-section">
+    <div class="contact-form">
+      <h2>Leave Your Feedback</h2>
+      <form action="thank-you.html" method="GET">
+        <input type="text" name="name" placeholder="Your Full Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+
+        <label for="rating"><strong>Rating (1 to 5):</strong></label>
+        <select name="rating" id="rating" required>
+          <option value="" disabled selected>Select your rating</option>
+          <option value="5">★★★★★ Excellent</option>
+          <option value="4">★★★★☆ Good</option>
+          <option value="3">★★★☆☆ Average</option>
+          <option value="2">★★☆☆☆ Poor</option>
+          <option value="1">★☆☆☆☆ Very Poor</option>
+        </select>
+
+        <textarea name="message" rows="5" placeholder="Your comments or suggestions..." required></textarea>
+        <button type="submit" class="btn">Submit Feedback</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Home Essentials. All rights reserved.</p>
+    <div class="socials">
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
