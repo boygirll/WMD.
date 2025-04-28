@@ -1,0 +1,468 @@
+/* 🔥 General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    padding-top: 70px;  /* Prevents content from hiding under navbar */
+}
+
+/* 🔥 Navigation Bar (Fixed at Top) */
+header {
+    background: #222;
+    color: white;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.logo:hover {
+    color: #ffcc00; /* Changes color when hovered */
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #121211;
+}
+.active, nav ul li a:hover {
+    color: #d40d0d;
+}
+
+/* 🔥 Toggle Button for Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* 🔥 Hero Section */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0px;
+    margin-top: 0%;
+}
+.hero-text {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+.hero h1 {
+    font-size: 36px;
+}
+.hero p {
+    font-size: 18px;
+}
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ffcc00;
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+.btn:hover {
+    background: #e6b800;
+}
+
+/* 🔥 Categories Section */
+.categories {
+    text-align: center;
+    padding: 50px 20px;
+    background: #ffcc00;
+}
+.category-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.category {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔥 Improved Category Images */
+.category img {
+    width: 100%;
+    height: 200px;  /* Ensures uniform height */
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 10px;
+    display: block; /* Fixes unwanted spacing */
+}
+
+/* 🔥 Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.socials a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* 🔥 Responsive Design (Mobile-Friendly) */
+@media (max-width: 768px) {
+    /* Show Toggle Button */
+    .menu-toggle {
+        display: block;
+    }
+    /* Hide Nav Links by Default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 60px;
+        padding: 10px 0;
+        text-align: center;
+    }
+    /* Show Menu When Active */
+    .nav-links.show {
+        display: flex;
+    }
+    .nav-links li {
+        padding: 10px;
+    }
+    /* Adjust Hero Section */
+    .hero {
+        height: 300px;
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+    /* Stack Categories Vertically */
+    .category-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* 🔥 About Page Hero Section */
+.about-hero {
+    background: url('images/about-bg.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+/* 🔥 About Page Content */
+.about-content {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+.about-content h2 {
+    color: #222;
+    margin-bottom: 15px;
+}
+.about-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.about-content ul {
+    list-style: none;
+    padding: 0;
+}
+.about-content ul li {
+    font-size: 18px;
+    background: #ffcc00;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #222;
+}
+
+/* 🔥 Products Page Hero Section */
+.products-hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+/* 🔥 Product Categories Section */
+.product-categories {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e6b800;
+}
+.product-categories h2 {
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* 🔥 Category Grid */
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three items per row */
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* 🔥 Individual Category Box */
+.category {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🔥 Uniform Category Images */
+.category img {
+    width: 100%;
+    height: 250px; /* Ensures all images have the same height */
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 10px;
+    display: block;
+}
+
+/* 🔥 Category Text */
+.category h3 {
+    margin: 15px 0 10px;
+}
+.category a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffcc00;
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+.category a:hover {
+    background: #e6b800;
+}
+
+/* 🔥 Category Hover Effect */
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔥 Responsive Design (Mobile-Friendly) */
+@media (max-width: 900px) {
+    .category-container {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .category-container {
+        grid-template-columns: 1fr; /* One item per row on mobile */
+    }
+}
+
+.products {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .product {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .product h3 {
+    margin: 15px 0 10px;
+  }
+  .product .price {
+    font-weight: bold;
+    color: #d40d0d;
+    margin-bottom: 10px;
+  }
+  .product a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffcc00;
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  .product:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 900px) {
+    .product-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .product-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  /* 🔥 Contact Section */
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .contact-info,
+  .contact-form {
+    flex: 1 1 45%;
+  }
+  .contact-info h2,
+  .contact-form h2 {
+    margin-bottom: 20px;
+    color: #222;
+  }
+  .contact-info p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: vertical;
+  }
+  .contact-form button {
+    background: #ffcc00;
+    color: #222;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .contact-form button:hover {
+    background: #e6b800;
+  }
+  
+  /* 🔥 Responsive Contact Section */
+  @media (max-width: 768px) {
+    .contact-section {
+      flex-direction: column;
+    }
+  }
+  /* 🔥 Sticky footer layout ONLY for thank-you page */
+.thank-you-wrapper {
+    min-height: calc(100vh - 130px); /* Adjusted for nav + footer height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* 🔥 Thank You Section Styling */
+  .thank-you-section {
+    flex-grow: 1;
+    text-align: center;
+    padding: 60px 20px;
+    background: #f4f4f4;
+  }
+  .thank-you-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  .thank-you-section .btn {
+    padding: 12px 25px;
+    background: #ffcc00;
+    color: #222;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  .thank-you-section .btn:hover {
+    background: #e6b800;
+  }
+  
